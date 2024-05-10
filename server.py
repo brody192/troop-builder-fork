@@ -32,7 +32,7 @@ class BuildWebhook(BaseHTTPRequestHandler):
         self.wfile.write(fname.encode())
 
 if __name__ == "__main__":
-    server = HTTPServer(("localhost", 9090), BuildWebhook)
+    server = HTTPServer(("0.0.0.0", 9090), BuildWebhook)
     print("Server starting...")
     print(base_path)
 
